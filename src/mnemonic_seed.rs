@@ -1,15 +1,5 @@
-use hmac::digest::{Digest, KeyInit};
-use hmac::{
-    digest::{
-        block_buffer::Eager,
-        core_api::{BlockSizeUser, BufferKindUser, CoreProxy, FixedOutputCore, UpdateCore},
-        typenum::{IsLess, Le, NonZero, U256},
-        HashMarker, Mac,
-    },
-    Hmac,
-};
+use hmac::Hmac;
 use pbkdf2::pbkdf2;
-use sha2::Sha256;
 use sha2::Sha512;
 
 pub struct MnemonicSeed {
